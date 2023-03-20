@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.model.base;
+package com.zhr.model.base;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;

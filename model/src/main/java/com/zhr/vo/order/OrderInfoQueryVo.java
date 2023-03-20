@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.order;
+package com.zhr.vo.order;
 
 import lombok.Data;
 import io.swagger.annotations.ApiModelProperty;

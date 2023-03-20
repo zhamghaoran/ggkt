@@ -1,0 +1,19 @@
+server:
+  port: 8301
+spring:
+#  环境设置 dev、test、prod
+  profiles:
+    active: dev
+  application:
+    name: service-vod
+  datasource:
+#    数据库配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://
+    username:
+    password:
+
+# mybatis 日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

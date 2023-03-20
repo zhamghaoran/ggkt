@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.model.vod;
+package com.zhr.model.vod;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;

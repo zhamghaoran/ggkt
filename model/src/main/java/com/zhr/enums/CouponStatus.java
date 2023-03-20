@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.enums;
+package com.zhr.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;

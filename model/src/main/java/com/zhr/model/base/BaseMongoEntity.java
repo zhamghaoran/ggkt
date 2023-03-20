@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.model.base;
+package com.zhr.model.base;
 
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.CreatedDate;

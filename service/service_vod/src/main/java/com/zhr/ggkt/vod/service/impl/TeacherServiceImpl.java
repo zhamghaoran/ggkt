@@ -1,9 +1,9 @@
 package com.zhr.ggkt.vod.service.impl;
 
-import com.zhr.ggkt.vod.entity.Teacher;
 import com.zhr.ggkt.vod.mapper.TeacherMapper;
 import com.zhr.ggkt.vod.service.TeacherService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.zhr.model.vod.Teacher;
 import org.springframework.stereotype.Service;
 
 /**

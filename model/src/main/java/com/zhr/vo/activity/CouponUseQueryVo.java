@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.activity;
+package com.zhr.vo.activity;
 
 import lombok.Data;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,8 +1,8 @@
-package com.atguigu.ggkt.model.order;
+package com.zhr.model.order;
 
-import com.atguigu.ggkt.enums.PaymentStatus;
-import com.atguigu.ggkt.enums.PaymentType;
-import com.atguigu.ggkt.model.base.BaseEntity;
+import com.zhr.enums.PaymentStatus;
+import com.zhr.enums.PaymentType;
+import com.zhr.model.base.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;

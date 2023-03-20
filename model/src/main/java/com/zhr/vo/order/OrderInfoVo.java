@@ -1,6 +1,6 @@
-package com.atguigu.ggkt.vo.order;
+package com.zhr.vo.order;
 
-import com.atguigu.ggkt.model.order.OrderInfo;
+import com.zhr.model.order.OrderInfo;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.vod;
+package com.zhr.vo.vod;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;

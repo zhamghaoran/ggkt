@@ -1,6 +1,6 @@
-package com.atguigu.ggkt.model.wechat;
+package com.zhr.model.wechat;
 
-import com.atguigu.ggkt.model.base.BaseEntity;
+import com.zhr.model.base.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;

@@ -1,7 +1,7 @@
-package com.atguigu.ggkt.vo.live;
+package com.zhr.vo.live;
 
-import com.atguigu.ggkt.model.live.LiveCourseConfig;
-import com.atguigu.ggkt.model.live.LiveCourseGoods;
+import com.zhr.model.live.LiveCourseConfig;
+import com.zhr.model.live.LiveCourseGoods;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

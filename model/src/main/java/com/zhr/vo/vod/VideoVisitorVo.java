@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.vod;
+package com.zhr.vo.vod;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;

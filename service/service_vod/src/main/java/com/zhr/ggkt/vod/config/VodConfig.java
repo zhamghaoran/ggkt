@@ -1,2 +1,12 @@
-package com.zhr.ggkt.vod.config;public class VodConfig {
+package com.zhr.ggkt.vod.config;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @author 20179
+ */
+@Configuration
+public class VodConfig {
+
 }

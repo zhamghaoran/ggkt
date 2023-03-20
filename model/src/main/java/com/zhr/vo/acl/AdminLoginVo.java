@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.acl;
+package com.zhr.vo.acl;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

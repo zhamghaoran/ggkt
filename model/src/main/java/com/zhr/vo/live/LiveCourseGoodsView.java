@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.live;
+package com.zhr.vo.live;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

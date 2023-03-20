@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.wechat;
+package com.zhr.vo.wechat;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -1,7 +1,8 @@
 package com.zhr.ggkt.vod.service;
 
-import com.zhr.ggkt.vod.entity.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zhr.model.vod.Teacher;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author zhr
  * @since 2023-03-20
  */
+@Service
 public interface TeacherService extends IService<Teacher> {
 
 }

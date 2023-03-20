@@ -1,4 +1,4 @@
-package com.atguigu.ggkt.vo.vod;
+package com.zhr.vo.vod;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
