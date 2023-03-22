@@ -7,8 +7,14 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import java.util.Date;
 
+/**
+ * @author 20179
+ */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @ApiModel(description = "Teacher")
 @TableName("teacher")

@@ -1,4 +1,4 @@
-package com.zhr.ggkt.vod.service;
+package com.zhr.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zhr.model.vod.Teacher;

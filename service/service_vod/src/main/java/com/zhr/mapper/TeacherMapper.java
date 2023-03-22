@@ -1,4 +1,4 @@
-package com.zhr.ggkt.vod.mapper;
+package com.zhr.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zhr.model.vod.Teacher;

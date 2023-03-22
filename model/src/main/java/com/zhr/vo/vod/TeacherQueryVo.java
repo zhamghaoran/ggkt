@@ -3,6 +3,9 @@ package com.zhr.vo.vod;
 import lombok.Data;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * @author 20179
+ */
 @Data
 public class TeacherQueryVo {
 	
