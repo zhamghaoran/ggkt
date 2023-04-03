@@ -28,6 +28,7 @@ import java.util.List;
 @Api(tags = "讲师管理接口")
 @RestController
 @RequestMapping("/admin/vod/teacher")
+@CrossOrigin
 public class TeacherController {
     @Autowired
     private TeacherService teacherService;
@@ -96,7 +97,7 @@ public class TeacherController {
         }
         // 调用方法得到分页查询的结果
         Page<Teacher> pageModel = teacherService.page(pageParam, teacherLambdaQueryWrapper);
-        return Result.success(pageModel);
+        return Result.success(pageModel).code(20000);
     }
 
     // 添加讲师
