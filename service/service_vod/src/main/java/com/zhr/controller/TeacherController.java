@@ -97,7 +97,7 @@ public class TeacherController {
         }
         // 调用方法得到分页查询的结果
         Page<Teacher> pageModel = teacherService.page(pageParam, teacherLambdaQueryWrapper);
-        return Result.success(pageModel).code(20000);
+        return Result.success(pageModel);
     }
 
     // 添加讲师
@@ -116,11 +116,6 @@ public class TeacherController {
     @ApiOperation(value = "根据id查询")
     @GetMapping("/getTeacher/{id}")
     public Result getTeacher(@PathVariable Long id) {
-        try {
-            int i = 1 / 0;
-        } catch (Exception e) {
-            throw  new GGKTException(201,e.getMessage());
-        }
         Teacher byId = teacherService.getById(id);
         return Result.success(byId);
     }

@@ -14,9 +14,22 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://
     username:
-    password:
+    password: @
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
 
 # mybatis 日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 腾讯云配置信息
+tencent:
+  cos:
+    file:
+      region:
+      secretid:
+      secretkey:
+      bucketname:
