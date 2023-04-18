@@ -2,6 +2,7 @@ package com.zhr.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zhr.model.vod.Course;
+import com.zhr.vo.vod.CourseProgressVo;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -15,4 +16,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface CourseMapper extends BaseMapper<Course> {
 
+    CourseProgressVo selectCoursePublishVoById(Long id);
 }

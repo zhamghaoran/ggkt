@@ -15,11 +15,13 @@ import com.zhr.service.CourseService;
 import com.zhr.service.SubjectService;
 import com.zhr.service.TeacherService;
 import com.zhr.vo.vod.CourseFormVo;
+import com.zhr.vo.vod.CourseProgressVo;
 import com.zhr.vo.vod.CourseQueryVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -133,6 +135,20 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         CourseDescription courseDescription = new CourseDescription();
         courseDescription.setDescription(courseFormVo.getDescription());
         courseDescriptionService.updateById(courseDescription);
+    }
+
+    @Override
+    public CourseProgressVo getCoursePublishVo(Long id) {
+        return baseMapper.selectCoursePublishVoById(id);
+    }
+
+    // 课程最终发布
+    @Override
+    public void publishCourse(Long id) {
+        Course course = baseMapper.selectById(id);
+        course.setStatus(1); // 课程已经发布
+        course.setPublishTime(new Date());
+        baseMapper.updateById(course);
     }
 
     // 获取讲师和分类名称

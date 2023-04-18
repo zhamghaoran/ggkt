@@ -12,7 +12,7 @@ spring:
   datasource:
 #    数据库配置
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://
+    url: jdbc:
     username:
     password:
   servlet:

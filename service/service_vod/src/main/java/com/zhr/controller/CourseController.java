@@ -6,6 +6,7 @@ import com.zhr.model.vod.Course;
 import com.zhr.result.Result;
 import com.zhr.service.CourseService;
 import com.zhr.vo.vod.CourseFormVo;
+import com.zhr.vo.vod.CourseProgressVo;
 import com.zhr.vo.vod.CourseQueryVo;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,7 @@ public class CourseController {
     public Result courseList(@PathVariable Long page,
                              @PathVariable Long limit,
                              CourseQueryVo courseQueryVo) {
-        Page<Course> pageParam = new Page<>(page,limit);
+        Page<Course> pageParam = new Page<>(page, limit);
         Map<String, Object> map = courseService.findPageCourse(pageParam, courseQueryVo);
         return Result.success(map);
     }
@@ -61,6 +62,22 @@ public class CourseController {
     public Result update(@RequestBody CourseFormVo courseFormVo) {
         courseService.updateCourseId(courseFormVo);
         return Result.success();
+    }
+
+    // 根据课程id 查询发布的信息
+    @ApiOperation("id 查询发布的信息")
+    @GetMapping("getCoursePublishVo/{id}")
+    public Result getCoursePublishVo(@PathVariable Long id) {
+        CourseProgressVo courseProgressVo = courseService.getCoursePublishVo(id);
+        return Result.success(courseProgressVo);
+    }
+
+    // 课程最终发布
+    @ApiOperation("课程最终发布")
+    @PutMapping("publishCourse/{id}")
+    public Result publishCourse(@PathVariable Long id) {
+        courseService.publishCourse(id);
+        return Result.success(null);
     }
 }
 
