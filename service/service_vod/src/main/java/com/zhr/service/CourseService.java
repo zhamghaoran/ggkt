@@ -2,9 +2,10 @@ package com.zhr.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zhr.entity.CourseProgressVo;
 import com.zhr.model.vod.Course;
 import com.zhr.vo.vod.CourseFormVo;
-import com.zhr.vo.vod.CourseProgressVo;
+import com.zhr.vo.vod.CoursePublishVo;
 import com.zhr.vo.vod.CourseQueryVo;
 
 import java.util.Map;
@@ -27,7 +28,7 @@ public interface CourseService extends IService<Course> {
 
     void updateCourseId(CourseFormVo courseFormVo);
 
-    CourseProgressVo getCoursePublishVo(Long id);
+    CoursePublishVo getCoursePublishVo(Long id);
 
     void publishCourse(Long id);
 }

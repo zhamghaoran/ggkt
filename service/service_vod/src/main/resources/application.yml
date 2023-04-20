@@ -10,9 +10,9 @@ spring:
   application:
     name: service-vod
   datasource:
-#    数据库配置
+    #    数据库配置
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:
+    url: jdbc:mysql://
     username:
     password:
   servlet:

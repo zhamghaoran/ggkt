@@ -2,11 +2,12 @@ package com.zhr.controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.zhr.entity.CourseProgressVo;
 import com.zhr.model.vod.Course;
 import com.zhr.result.Result;
 import com.zhr.service.CourseService;
 import com.zhr.vo.vod.CourseFormVo;
-import com.zhr.vo.vod.CourseProgressVo;
+import com.zhr.vo.vod.CoursePublishVo;
 import com.zhr.vo.vod.CourseQueryVo;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,14 +62,14 @@ public class CourseController {
     @PostMapping("update")
     public Result update(@RequestBody CourseFormVo courseFormVo) {
         courseService.updateCourseId(courseFormVo);
-        return Result.success();
+        return Result.success(courseFormVo.getId());
     }
 
     // 根据课程id 查询发布的信息
     @ApiOperation("id 查询发布的信息")
     @GetMapping("getCoursePublishVo/{id}")
     public Result getCoursePublishVo(@PathVariable Long id) {
-        CourseProgressVo courseProgressVo = courseService.getCoursePublishVo(id);
+        CoursePublishVo courseProgressVo = courseService.getCoursePublishVo(id);
         return Result.success(courseProgressVo);
     }
 

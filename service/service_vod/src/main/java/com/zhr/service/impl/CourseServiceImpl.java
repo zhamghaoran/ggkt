@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.zhr.entity.CourseProgressVo;
 import com.zhr.mapper.CourseMapper;
 import com.zhr.model.vod.Course;
 import com.zhr.model.vod.CourseDescription;
@@ -15,7 +16,7 @@ import com.zhr.service.CourseService;
 import com.zhr.service.SubjectService;
 import com.zhr.service.TeacherService;
 import com.zhr.vo.vod.CourseFormVo;
-import com.zhr.vo.vod.CourseProgressVo;
+import com.zhr.vo.vod.CoursePublishVo;
 import com.zhr.vo.vod.CourseQueryVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -134,11 +135,12 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         // 修改课程的描述信息
         CourseDescription courseDescription = new CourseDescription();
         courseDescription.setDescription(courseFormVo.getDescription());
+        courseDescription.setId(course.getId());
         courseDescriptionService.updateById(courseDescription);
     }
 
     @Override
-    public CourseProgressVo getCoursePublishVo(Long id) {
+    public CoursePublishVo getCoursePublishVo(Long id) {
         return baseMapper.selectCoursePublishVoById(id);
     }
 
