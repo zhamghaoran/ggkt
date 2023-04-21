@@ -1,13 +1,11 @@
 package com.zhr.service.impl;
 
-import cn.hutool.bloomfilter.BloomFilter;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.jjking.BloomFilterConstructor;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhr.entity.Chapter;
 import com.zhr.mapper.ChapterMapper;
 import com.zhr.model.vod.Video;
 import com.zhr.service.ChapterService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhr.service.VideoService;
 import com.zhr.vo.vod.ChapterVo;
 import com.zhr.vo.vod.VideoVo;
@@ -63,8 +61,15 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
             chapterVo.setChildren(videoVoList);
             finalChapterList.add(chapterVo);
         });
-
-
         return finalChapterList;
+    }
+
+    // 根据课程id删除章节
+
+    @Override
+    public void removeChapterByCourseId(Long id) {
+        LambdaQueryWrapper<Chapter> chapterLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        chapterLambdaQueryWrapper.eq(Chapter::getCourseId, id);
+        baseMapper.delete(chapterLambdaQueryWrapper);
     }
 }

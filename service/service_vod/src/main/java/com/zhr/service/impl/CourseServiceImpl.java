@@ -11,10 +11,7 @@ import com.zhr.model.vod.Course;
 import com.zhr.model.vod.CourseDescription;
 import com.zhr.model.vod.Subject;
 import com.zhr.model.vod.Teacher;
-import com.zhr.service.CourseDescriptionService;
-import com.zhr.service.CourseService;
-import com.zhr.service.SubjectService;
-import com.zhr.service.TeacherService;
+import com.zhr.service.*;
 import com.zhr.vo.vod.CourseFormVo;
 import com.zhr.vo.vod.CoursePublishVo;
 import com.zhr.vo.vod.CourseQueryVo;
@@ -46,6 +43,11 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     @Autowired
     private CourseDescriptionService courseDescriptionService;
+    @Autowired
+    private VideoService videoService;
+
+    @Autowired
+    private ChapterService chapterService;
 
     // 点播课程列表
     @Override
@@ -151,6 +153,17 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         course.setStatus(1); // 课程已经发布
         course.setPublishTime(new Date());
         baseMapper.updateById(course);
+    }
+
+    @Override
+    public void removeCourseId(Long id) {
+        // 根据课程id删除小节
+        videoService.removeVideoByCourseId(id);
+        // 根据课程id删除章节
+        chapterService.removeChapterByCourseId(id);
+        // 根据课程id删除课程
+        courseDescriptionService.removeById(id);
+        baseMapper.deleteById(id);
     }
 
     // 获取讲师和分类名称

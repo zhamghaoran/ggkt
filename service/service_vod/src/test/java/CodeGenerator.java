@@ -57,7 +57,7 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://:3306/glkt_vod?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql:///glkt_vod?useUnicode=true&useSSL=false&characterEncoding=utf8");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("");
         dsc.setPassword("");
@@ -117,5 +117,5 @@ public class CodeGenerator {
     }
 }
 /**
- course,course_description,chapter,video
+video_visitor
  */

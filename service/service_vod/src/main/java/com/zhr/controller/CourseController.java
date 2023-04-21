@@ -10,6 +10,7 @@ import com.zhr.vo.vod.CourseFormVo;
 import com.zhr.vo.vod.CoursePublishVo;
 import com.zhr.vo.vod.CourseQueryVo;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -79,6 +80,13 @@ public class CourseController {
     public Result publishCourse(@PathVariable Long id) {
         courseService.publishCourse(id);
         return Result.success(null);
+    }
+
+    // 删除课程
+    @DeleteMapping("remove/{id}")
+    public Result remove(@PathVariable Long id) {
+        courseService.removeCourseId(id);
+        return Result.success();
     }
 }
 
