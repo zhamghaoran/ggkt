@@ -14,4 +14,7 @@ import com.zhr.model.vod.Video;
 public interface VideoService extends IService<Video> {
 
     void removeVideoByCourseId(Long id);
+
+    // 删除小节的时候删除视频
+    void removeVideoById(Long id);
 }
