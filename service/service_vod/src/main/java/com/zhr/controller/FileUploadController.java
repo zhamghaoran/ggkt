@@ -19,7 +19,7 @@ import java.io.IOException;
 @RestController
 @Api(tags = "文件上传接口")
 @RequestMapping("/admin/vod/file")
-@CrossOrigin
+//@CrossOrigin
 public class FileUploadController {
     @Autowired
     private FileService fileService;

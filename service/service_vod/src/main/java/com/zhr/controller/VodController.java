@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @Api(tags = "腾讯云点播")
-@CrossOrigin
+//@CrossOrigin
 @RequestMapping("/admin/vod")
 public class VodController {
     @Autowired
