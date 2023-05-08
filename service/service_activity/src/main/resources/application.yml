@@ -1,8 +1,8 @@
 server:
-  port: 8302
+  port: 8303
 spring:
   application:
-    name: service-order
+    name: service-activity
   profiles:
     active: dev
   mvc:
@@ -10,7 +10,7 @@ spring:
       matching-strategy: ant_path_matcher
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://glkt_order
+    url: jdbc:mysql:///glkt_activity
     username:
     password:
   jackson:

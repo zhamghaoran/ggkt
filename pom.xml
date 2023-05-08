@@ -20,6 +20,9 @@
         <module>common</module>
         <module>service-gateway</module>
         <module>service/service_order</module>
+        <module>service/service_activity</module>
+        <module>service/service_user</module>
+        <module>service/service-client</module>
     </modules>
 
     <properties>

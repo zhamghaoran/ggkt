@@ -23,6 +23,14 @@ spring:
           uri: lb://service-order
           predicates:
             - Path=/*/order/**
+        - id: service-user
+          uri: lb://service-user
+          predicates:
+            - Path=/*/user/**
+        - id: service-activity
+          uri: lb://service-activity
+          predicates:
+            - Path=/*/activity/**
 management:
   endpoints:
     web:
